@@ -1,20 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>LlamaEdge</title>
+    <title>An all-in-one CLI app to run LLMs locally</title>
     <meta charset="UTF-8">
+    <link rel="icon" href="/src/media/llamaedge-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./src/css/index.css"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+          content="The easiest & fastest way to run customized and fine-tuned LLMs locally or on the edge">
+    <meta name="keywords"
+          content="Run LLM locally,LLM inference,Open source LLM,ChatGPT alternative,self hosted LLM service,Priviate LLM service">
     <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans" rel="stylesheet">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M8VQVEPV98"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8VQVEPV98"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'G-M8VQVEPV98');
-</script>
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+
+        gtag('js', new Date());
+
+        gtag('config', 'G-M8VQVEPV98');
+    </script>
     <style>
         body {
             margin: 0;
@@ -57,6 +66,7 @@
         }
 
         .mobileFooter .nav .child {
+            margin-top: 0.5rem;
             margin-right: 4rem;
         }
 
@@ -182,7 +192,8 @@
         <div style="flex: 1;padding: 2rem 1.7rem;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);display: flex;justify-content: center;flex-direction: column;border-radius: 1.25rem;">
             <div style="font-size: 2rem;font-weight: bold;">Lightweight</div>
             <div style="font-size: 1.25rem;margin-top: 2rem;">
-                Runtime + API server is less than <span style="font-size: 2rem;font-weight: bold;">30MB</span>. No external dependency. Zero Python packages.
+                Runtime + API server is less than <span style="font-size: 2rem;font-weight: bold;">30MB</span>. No
+                external dependency. Zero Python packages.
             </div>
         </div>
         <div class="right"
@@ -205,10 +216,12 @@
         <div style="flex: 1;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);border-radius: 1.25rem;padding: 3px;display: flex;justify-content: center;flex-direction: column;">
             <div style="height: 100%;background-color: black;padding: 2rem 1.7rem;border-radius: 1.25rem;">
                 <div style="font-size: 2rem;">Write once run anywhere, for GPUs</div>
-                <div style="font-size: 1.5rem;margin-top: 1.7rem;">Create an LLM web service on a MacBook, deploy it on a
+                <div style="font-size: 1.5rem;margin-top: 1.7rem;">Create an LLM web service on a MacBook, deploy it on
+                    a
                     NVIDIA device.
                 </div>
                 <iframe style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                        loading="lazy"
                         width="560" height="315" src="https://www.youtube.com/embed/RFBneB9Ri4U?si=IcBGsBm5hzRESbwz"
                         title="YouTube video player" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -218,9 +231,11 @@
         <div class="right"
              style="flex: 1;padding: 2rem 1.7rem;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);display: flex;justify-content: center;flex-direction: column;border-radius: 1.25rem;">
             <div style="font-size: 2rem;">Native to the heterogeneous edge</div>
-            <div style="font-size: 1.5rem;margin-top: 1.7rem;">Orchestrate and move an LLM app across CPUs, GPUs and NPUs.
+            <div style="font-size: 1.5rem;margin-top: 1.7rem;">Orchestrate and move an LLM app across CPUs, GPUs and
+                NPUs.
             </div>
             <iframe style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                    loading="lazy"
                     width="560" height="315" src="https://www.youtube.com/embed/B37Ru2UK7Yg?si=SkY6nzrOgTz1Ydw0"
                     title="YouTube video player" frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -229,37 +244,37 @@
 
     </div>
 </div>
-    <div class="four-item"
-         style="text-align: center;display: flex;justify-content: space-around;background-color: #f5f7fa;padding:3.75rem 0;">
-        <div style="flex: 1;display: flex;justify-content: space-around;">
-            <div style="flex: 1">
-                <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
-                    2~4<span
-                        style="font-size: 1.5rem;">MB</span></div>
-                <div>Inference app</div>
-            </div>
-            <div style="flex: 1">
-                <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
-                    30<span
-                        style="font-size: 1.5rem;">MB</span></div>
-                <div>Total dependency</div>
-            </div>
+<div class="four-item"
+     style="text-align: center;display: flex;justify-content: space-around;background-color: #f5f7fa;padding:3.75rem 0;">
+    <div style="flex: 1;display: flex;justify-content: space-around;">
+        <div style="flex: 1">
+            <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
+                2~4<span
+                    style="font-size: 1.5rem;">MB</span></div>
+            <div>Inference app</div>
         </div>
-        <div style="flex: 1;display: flex;justify-content: space-around;">
-            <div style="flex: 1">
-                <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
-                    1000+
-                </div>
-                <div>Llama2 series of models</div>
-            </div>
-            <div style="flex: 1">
-                <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
-                    100<span
-                        style="font-size: 1.5rem;">%</span></div>
-                <div>Native spped</div>
-            </div>
+        <div style="flex: 1">
+            <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
+                30<span
+                    style="font-size: 1.5rem;">MB</span></div>
+            <div>Total dependency</div>
         </div>
     </div>
+    <div style="flex: 1;display: flex;justify-content: space-around;">
+        <div style="flex: 1">
+            <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
+                1000+
+            </div>
+            <div>Llama2 series of models</div>
+        </div>
+        <div style="flex: 1">
+            <div style="font-weight: 700;font-size: 2.5rem;margin-bottom:0.5rem;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
+                100<span
+                    style="font-size: 1.5rem;">%</span></div>
+            <div>Native spped</div>
+        </div>
+    </div>
+</div>
 <div style="padding:0 1.875rem;">
     <div style="color: white;padding:5rem 0;display: flex;justify-content: center;font-size: 1.25rem;">
         <div id="FAQs" class="codePlace">
@@ -269,28 +284,32 @@
                 <span style="font-weight: bold;">Q: Why can’t I just use the OpenAI API?</span>
                 <br>
                 <br>A:
-                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs are
+                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs
+                are
                 better.
             </div>
             <div style="padding-bottom:1.25rem;">
                 <span style="font-weight: bold;">Q: Why can’t I just start an OpenAI-compatible API server myself?</span>
                 <br>
                 <br>A:
-                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs are
+                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs
+                are
                 better.
             </div>
             <div style="padding-bottom:1.25rem;">
                 <span style="font-weight: bold;">Q: Why can’t I use Python to run the LLM?</span>
                 <br>
                 <br>A:
-                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs are
+                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs
+                are
                 better.
             </div>
             <div style="padding-bottom:1.25rem;">
                 <span style="font-weight: bold;">Q: Why can’t I just use native (C/C++ compiled) inference engines?</span>
                 <br>
                 <br>A:
-                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs are
+                OpenAI is great! However, when it comes to privacy, data security, and cost, self host open source LLMs
+                are
                 better.
             </div>
         </div>
@@ -303,31 +322,31 @@
         </a>
         <div class="nav" style="display: flex;">
             <div class="child">
-                <div style="font-weight: 700">LlamaEdge</div>
-                <a>How it works</a>
+                <div style="font-weight: 700;font-size: 1.25rem;margin-bottom: 0.5rem;">LlamaEdge</div>
+                <a href="">How it works</a>
                 <br/>
                 <a href="https://www.secondstate.io/articles/run-llm-sh/">Docs</a>
             </div>
             <div class="child">
-                <div style="font-weight: 700">Resources</div>
-                <a>Build a RAG application using Langchain</a>
+                <div style="font-weight: 700;font-size: 1.25rem;margin-bottom: 0.5rem;">Resources</div>
+                <a href="">Build a RAG application using Langchain</a>
                 <br/>
-                <a>Run your own model with LlamaEdge</a>
+                <a href="">Run your own model with LlamaEdge</a>
                 <br/>
-                <a>Source code</a>
+                <a href="">Source code</a>
             </div>
             <div class="child">
-                <div style="font-weight: 700">Contact Us</div>
+                <div style="font-weight: 700;font-size: 1.25rem;margin-bottom: 0.5rem;">Contact US</div>
                 <div class="footer-social-block">
-                    <a href="https://twitter.com/realwasmedge" class="footer-social-link w-inline-block">
+                    <a href="https://twitter.com/realwasmedge">
                         <img src="./src/media/twitter.svg" loading="lazy" alt="">
                     </a>
                     <a
-                            href="https://discord.gg/qCwvnwvtYU" class="footer-social-link w-inline-block">
+                            href="https://discord.gg/qCwvnwvtYU">
                         <img src="./src/media/discord.svg" loading="lazy" alt="">
                     </a>
-                    <a href="https://llamaedge.webflow.io/#" class="footer-social-link w-inline-block">
-                        <img src="./src/media/facebook.svg" loading="lazy" alt="">
+                    <a href="">
+                        <img src="./src/media/GitHub.svg" loading="lazy" alt="github_logo">
                     </a>
                 </div>
             </div>
