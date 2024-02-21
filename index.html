@@ -5,16 +5,17 @@
     <meta charset="UTF-8">
     <link rel="icon" href="./src/media/llamaedge-logo.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./src/css/index.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1,user-scalable=yes">
     <meta name="description"
           content="The easiest & fastest way to run customized and fine-tuned LLMs locally or on the edge">
     <meta name="keywords"
           content="Run LLM locally,LLM inference,Open source LLM,ChatGPT alternative,self hosted LLM service,Priviate LLM service">
     <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans:500,600,700" rel="stylesheet">
-    <script src="src/js/lazyframe.js"></script>
-    <link rel="stylesheet" href="src/css/lazyframe.css" />
+    <link href="./src/css/lite-youtube-embed.css" rel="stylesheet"/>
+    <script src="./src/js/lite-youtube-embed.js"></script>
+    <script src="https://www.youtube.com/iframe_api" id="iframe-demo"></script>
     <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8VQVEPV98"></script>
+    <script type="module" async src="https://www.googletagmanager.com/gtag/js?id=G-M8VQVEPV98"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
 
@@ -232,8 +233,9 @@
                 <div style="font-size: 1.5rem;margin-top: 1.7rem;">Create an LLM web service on a MacBook, deploy it on
                     a NVIDIA device.
                 </div>
-                <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
-                     id="left-player"></div>
+                <lite-youtube
+                        style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                        videoid="RFBneB9Ri4U"></lite-youtube>
             </div>
         </div>
         <div class="right"
@@ -242,8 +244,9 @@
             <div style="font-size: 1.5rem;margin-top: 1.7rem;">Orchestrate and move an LLM app across CPUs, GPUs and
                 NPUs.
             </div>
-            <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
-                 id="right-player"></div>
+            <lite-youtube
+                    style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                    videoid="B37Ru2UK7Yg"></lite-youtube>
         </div>
     </div>
 </div>
@@ -404,29 +407,28 @@
         document.body.removeChild(textArea);
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
-        console.log("DOMContentLoaded")
-        lazyframe(".left-player");
-        lazyframe(".right-player");
-        let tag = document.createElement('script');
-
-        tag.src = "https://www.youtube.com/iframe_api";
-        let firstScriptTag = document.getElementsByTagName('script')[0];
-        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    })
-
-    function onYouTubeIframeAPIReady() {
-        console.log("onYouTubeIframeAPIReady")
-        new YT.Player('left-player', {
-            width: '100%',
-            videoId: 'RFBneB9Ri4U',
-        });
-
-        new YT.Player('right-player', {
-            width: '100%',
-            videoId: 'B37Ru2UK7Yg',
-        });
-    }
+    //
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     console.log("DOMContentLoaded")
+    //     let tag = document.createElement('script');
+    //
+    //     tag.src = "https://www.youtube.com/iframe_api";
+    //     let firstScriptTag = document.getElementsByTagName('script')[0];
+    //     firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    // })
+    //
+    // function onYouTubeIframeAPIReady() {
+    //     console.log("onYouTubeIframeAPIReady")
+    //     new YT.Player('left-player', {
+    //         width: '100%',
+    //         videoId: 'RFBneB9Ri4U',
+    //     });
+    //
+    //     new YT.Player('right-player', {
+    //         width: '100%',
+    //         videoId: 'B37Ru2UK7Yg',
+    //     });
+    // }
 </script>
 </body>
 </html>
