@@ -11,6 +11,8 @@
     <meta name="keywords"
           content="Run LLM locally,LLM inference,Open source LLM,ChatGPT alternative,self hosted LLM service,Priviate LLM service">
     <link href="https://fonts.googleapis.com/css?family=Kumbh+Sans:500,600,700" rel="stylesheet">
+    <script src="src/js/lazyframe.js"></script>
+    <link rel="stylesheet" href="src/css/lazyframe.css" />
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-M8VQVEPV98"></script>
     <script>
@@ -404,6 +406,8 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         console.log("DOMContentLoaded")
+        lazyframe(".left-player");
+        lazyframe(".right-player");
         let tag = document.createElement('script');
 
         tag.src = "https://www.youtube.com/iframe_api";
