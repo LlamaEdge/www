@@ -409,8 +409,10 @@
         tag.src = "https://www.youtube.com/iframe_api";
         let firstScriptTag = document.getElementsByTagName('script')[0];
         firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        console.log("tag",tag)
 
         function onYouTubeIframeAPIReady() {
+            console.log("onYouTubeIframeAPIReady")
             new YT.Player('left-player', {
                 width: '100%',
                 videoId: 'RFBneB9Ri4U',
