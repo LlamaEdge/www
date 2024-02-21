@@ -213,35 +213,23 @@
     <h1 style="margin-top: 8rem;font-size: 2.5rem;text-align: center;background: linear-gradient(180deg, #A357CD 0%, #452A7E 100%);-webkit-background-clip: text;background-clip: text;color: transparent;">
         Cross-platform LLM agents and web services in Rust or JavaScript</h1>
     <div class="mobileSet" style="display: flex;justify-content:space-around;color: white;">
-        <div style="flex: 1;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);border-radius: 1.25rem;padding: 3px;display: flex;justify-content: center;flex-direction: column;">
+        <div style="flex: 1;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);border-radius: 1.25rem;padding: 3px;display: flex;justify-content: space-between;flex-direction: column;">
             <div style="height: 100%;background-color: black;padding: 2rem 1.7rem;border-radius: 1.25rem;">
                 <div style="font-size: 2rem;">Write once run anywhere, for GPUs</div>
                 <div style="font-size: 1.5rem;margin-top: 1.7rem;">Create an LLM web service on a MacBook, deploy it on
-                    a
-                    NVIDIA device.
+                    a NVIDIA device.
                 </div>
-                <iframe style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
-                        loading="lazy"
-                        width="560" height="315" src="https://www.youtube.com/embed/RFBneB9Ri4U?si=IcBGsBm5hzRESbwz"
-                        title="YouTube video player" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
+                <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;" id="left-player"></div>
             </div>
         </div>
         <div class="right"
-             style="flex: 1;padding: 2rem 1.7rem;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);display: flex;justify-content: center;flex-direction: column;border-radius: 1.25rem;">
+             style="flex: 1;padding: 2rem 1.7rem;background: linear-gradient(90deg, #A658D0 0%, #3C2576 100%);display: flex;justify-content: space-between;flex-direction: column;border-radius: 1.25rem;">
             <div style="font-size: 2rem;">Native to the heterogeneous edge</div>
             <div style="font-size: 1.5rem;margin-top: 1.7rem;">Orchestrate and move an LLM app across CPUs, GPUs and
                 NPUs.
             </div>
-            <iframe style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
-                    loading="lazy"
-                    width="560" height="315" src="https://www.youtube.com/embed/B37Ru2UK7Yg?si=SkY6nzrOgTz1Ydw0"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
+            <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;" id="right-player"></div>
         </div>
-
     </div>
 </div>
 <div class="four-item"
@@ -402,6 +390,24 @@
         textArea.select();
         navigator.clipboard.writeText(text);
         document.body.removeChild(textArea);
+    }
+
+    let tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    let firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    function onYouTubeIframeAPIReady() {
+        new YT.Player('left-player', {
+            width: '100%',
+            videoId: 'RFBneB9Ri4U',
+        });
+
+        new YT.Player('right-player', {
+            width: '100%',
+            videoId: 'B37Ru2UK7Yg',
+        });
     }
 </script>
 </body>
