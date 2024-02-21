@@ -363,17 +363,14 @@
     const textCopied = document.getElementById('text-copied');
     let isHoveringInfoDiv = false;
 
-    // 鼠标进入info图标时显示div
     infoIcon.addEventListener('mouseenter', () => {
         infoDiv.style.display = 'block';
     });
 
-    // 鼠标进入info图标时显示div
     infoDiv.addEventListener('mouseenter', () => {
         isHoveringInfoDiv = true;
     });
 
-    // 鼠标离开info图标或div时隐藏div
     infoIcon.addEventListener('mouseleave', () => {
         setTimeout(() => {
             if (!isHoveringInfoDiv) {
@@ -406,6 +403,7 @@
     }
 
     document.addEventListener('DOMContentLoaded', function () {
+        console.log("DOMContentLoaded")
         let tag = document.createElement('script');
 
         tag.src = "https://www.youtube.com/iframe_api";
