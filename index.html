@@ -195,7 +195,8 @@
                     Learn why choose Rust + Wasm tech stack
                 </div>
             </a>
-            <img alt="info" id="info-icon" style="width: 1.2rem;margin-left: 0.2rem;cursor: pointer;" src="./src/media/Info.svg">
+            <img alt="info" id="info-icon" style="width: 1.2rem;margin-left: 0.2rem;cursor: pointer;"
+                 src="./src/media/Info.svg">
         </div>
     </div>
     <div id="Feature" class="mobileSet" style="display: flex;justify-content:space-around;color: white;">
@@ -229,7 +230,8 @@
                 <div style="font-size: 1.5rem;margin-top: 1.7rem;">Create an LLM web service on a MacBook, deploy it on
                     a NVIDIA device.
                 </div>
-                <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;" id="left-player"></div>
+                <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                     id="left-player"></div>
             </div>
         </div>
         <div class="right"
@@ -238,7 +240,8 @@
             <div style="font-size: 1.5rem;margin-top: 1.7rem;">Orchestrate and move an LLM app across CPUs, GPUs and
                 NPUs.
             </div>
-            <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;" id="right-player"></div>
+            <div style="border: 1px solid #787878;width: 100%;max-width: 95vw;border-radius: 2rem;margin-top: 2.3rem;"
+                 id="right-player"></div>
         </div>
     </div>
 </div>
@@ -402,23 +405,25 @@
         document.body.removeChild(textArea);
     }
 
-    // let tag = document.createElement('script');
-    //
-    // tag.src = "https://www.youtube.com/iframe_api";
-    // let firstScriptTag = document.getElementsByTagName('script')[0];
-    // firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
-    //
-    // function onYouTubeIframeAPIReady() {
-    //     new YT.Player('left-player', {
-    //         width: '100%',
-    //         videoId: 'RFBneB9Ri4U',
-    //     });
-    //
-    //     new YT.Player('right-player', {
-    //         width: '100%',
-    //         videoId: 'B37Ru2UK7Yg',
-    //     });
-    // }
+    document.addEventListener('DOMContentLoaded', function () {
+        let tag = document.createElement('script');
+
+        tag.src = "https://www.youtube.com/iframe_api";
+        let firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+        function onYouTubeIframeAPIReady() {
+            new YT.Player('left-player', {
+                width: '100%',
+                videoId: 'RFBneB9Ri4U',
+            });
+
+            new YT.Player('right-player', {
+                width: '100%',
+                videoId: 'B37Ru2UK7Yg',
+            });
+        }
+    })
 </script>
 </body>
 </html>
