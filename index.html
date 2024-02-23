@@ -286,23 +286,23 @@
             <h2 style="font-weight: 700;font-size: 2rem;text-align: center;">FAQs</h2>
             <p style="text-align: center;"> Learn more about LlamaEdge</p>
             <div style="padding-bottom:1.25rem;">
-                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can’t I just use the OpenAI API?</span>
+                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can't I just use the OpenAI API?</span>
                 <p style="margin-bottom: 20px">A: Hosted LLM APIs are easy to use. But they are also expensive and difficult to customize for your own apps. The hosted LLMs are heavily censored (aligned, or “dumbed down”) generalists. It currently costs you millions of dollars and months of time to ask OpenAI to fine-tune ChatGPT for your own knowledge domain.</p> 
                 <p style="margin-bottom: 20px">Furthermore, hosted LLMs are not private. You are at risk of leaking your data and privacy to the LLM hosting companies. In fact, OpenAI requires you to pay more for a “promise” not to use your interaction data in future training. </p>
             </div>
             <div style="padding-bottom:1.25rem;">
-                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can’t I just start an OpenAI-compatible API server over a fined-tuned open source model myself?</span>
-                <p style="margin-bottom: 20px">A: You sure can! In fact, you can start an OpenAI-compatible API server on any almost any open source LLM using LlamaEdge. LlamaEdge automagically utilizes the hardware accelerator and software runtime library in your device.</p> 
+                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can't I just start an OpenAI-compatible API server over an open-source model, and then use frameworks like LangChain or LlamaIndex in front of the API to build my app?</span>
+                <p style="margin-bottom: 20px">A: You sure can! In fact, you can start an OpenAI-compatible API server on almost any open-source LLM using LlamaEdge. LlamaEdge automagically utilizes the hardware accelerator and software runtime library in your device.</p> 
                 <p style="margin-bottom: 20px">However, often times, we need an compact and integrated solution, instead of a jumbo mixture of LLM runtime, API server, Python middleware, UI, and other glue code to tie them together.</p>
                 <p style="margin-bottom: 20px">LlamaEdge provides a set of modular components for you to assemble your own LLM agents and applications like Lego blocks. You can do this entirely in Rust or JavaScript, and compile down to a self-contained application binary that runs without modification across many devices.</p>
             </div>
             <div style="padding-bottom:1.25rem;">
-                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can’t I use Python to run the LLM?</span>
+                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can't I use Python to run the LLM inference?</span>
                 <p style="margin-bottom: 20px">A: You can certainly use Python to run LLMs and even start an API server using Python. But keep mind that PyTorch has over 5GB of complex dependencies. These dependencies often conflict with Python toolchains such as LangChain. It is often a nightmare to set up Python dependencies across dev and deployment machines, especially with GPUs and containers.</p> 
                 <p style="margin-bottom: 20px">In contrast, the entire LlamaEdge runtime is less than 30MB. It is has no external dependencies. Just install LlamaEdge and copy over your compiled application file! </p>
             </div>
             <div style="padding-bottom:1.25rem;">
-                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can’t I just use native (C/C++ compiled) inference engines?</span>
+                <span style="font-weight: bold;margin-bottom: 20px;">Q: Why can't I just use native (C/C++ compiled) inference engines?</span>
                 <p style="margin-bottom: 20px">A: The biggest issue with native compiled apps is that they are not portable. You must rebuild and retest for each computer you deploy the application. It is a very tedious and error prone progress. LlamaEdge programs are written in Rust (soon JS) and compiled to Wasm. The Wasm app runs as fast as native apps, and is entirely portable.</p> 
             </div>
         </div>
