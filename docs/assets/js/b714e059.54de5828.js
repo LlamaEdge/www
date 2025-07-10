@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkdocs=self.webpackChunkdocs||[]).push([[4144],{96:e=>{e.exports=JSON.parse('{"title":"LLM","slug":"/category/llm","permalink":"/docs/category/llm","navigation":{"previous":{"title":"LlamaEdge","permalink":"/docs/user-guide/"},"next":{"title":"Quick start with LLM models","permalink":"/docs/user-guide/llm/get-started-with-llamaedge"}}}')}}]);
